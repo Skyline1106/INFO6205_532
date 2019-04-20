@@ -119,7 +119,9 @@ public class Sudoku {
     public int fitness() {
         double prob = Math.random();
 
-        if (prob<0.1) {
+        this.phenotype = this.gene.clone();
+
+        if (prob<0.01) {
             this.mutatePheno();
         }
         return fitness(this.phenotype);
@@ -139,7 +141,7 @@ public class Sudoku {
                 if (colFlag[newG[j][i]])
                     ft++;
                 if ((newInitialGene[i][j] != 0 && newInitialGene[i][j] != newG[i][j]) || newG[i][j] == 0)
-                    ft += 10;
+                    ft += 1000;
 
                 rowFlag[newG[i][j]] = true;
                 colFlag[newG[j][i]] = true;

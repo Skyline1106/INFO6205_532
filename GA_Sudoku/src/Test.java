@@ -20,12 +20,12 @@ class Test {
         assertEquals(testgene.getgene()[3], 1);
         assertEquals(testgene.getgene()[4], 0);
         assertEquals(testgene.getgene()[5], 1);
-        testgene.getlength();
-        testgene.getPhenotype();
-        testgene.getscore();
-        testgene.setlength(81);
-        testgene.setPhenotype(testarray);
-        testgene.setscore(2);
+//        testgene.getlength();
+//        testgene.getPhenotype();
+//        testgene.getscore();
+//        testgene.setlength(81);
+//        testgene.setPhenotype(testarray);
+//        testgene.setscore(2);
     }
 
     @org.junit.jupiter.api.Test
