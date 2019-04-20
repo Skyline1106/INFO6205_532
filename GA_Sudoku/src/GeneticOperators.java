@@ -30,8 +30,6 @@ public class GeneticOperators {
             return muta;
         }
 
-
-
     public static int[] mutation(int[] gene, int index, int value) {
         gene[index] = value;
 
@@ -72,5 +70,6 @@ public class GeneticOperators {
         }
         return newG;
     }
+
 }
 

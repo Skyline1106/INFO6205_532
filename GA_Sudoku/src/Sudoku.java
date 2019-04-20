@@ -24,20 +24,12 @@ public class Sudoku {
 
         return min;
     }
-//    public void setgene(int gene[]) {
-//        this.gene=gene;
-//    }
-//    GeneticOperators geneticOperators = new GeneticOperators();
 
     public static Sudoku rouletteSelection(Vector<Sudoku> sudokus) {
         int max = 0;
         for (Sudoku sudoku : sudokus)
             if (sudoku.fitnessValue > max) max = sudoku.fitnessValue;
-//        int sum = 0;
-//        for (Sudoku sudoku : sudokus)
-//            sum += sudoku.getFitnessValue();
-//        for (Sudoku sudoku : sudokus)
-//            sudoku.setProbability(sudoku.getFitnessValue() / (sum * 1.0));
+
 
         int sum = 0;
         for (Sudoku sudoku : sudokus)
@@ -125,18 +117,12 @@ public class Sudoku {
     }
 
     public int fitness() {
-        //Random rand = new Random();
-
         double prob = Math.random();
-        //System.out.println(prob);
 
         if (prob<0.1) {
             this.mutatePheno();
         }
-
-
         return fitness(this.phenotype);
-        //return fitness(this.gene);
     }
 
     public static int fitness(int[] gene) {
@@ -251,12 +237,12 @@ public class Sudoku {
         //string += "\nFitness: " + fitnessValue;
 
         string += "\nPhenoType:";
-        for (int i : phenotype) {
-            string += i;
+        for (int j : phenotype) {
+            string += j;
         }
-        for (int i = 0; i < phenotype.length; i++)
-            string += ((i % dimensions == 0) ? "\n" : "") + phenotype[i] + " ";
-        string += "\nFitness: " + fitnessValue;
+        for (int j = 0; j < phenotype.length; j++)
+            string += ((j % dimensions == 0) ? "\n" : "") + phenotype[j] + " ";
+        string += "\nFitness: " + fitnessValue + "\n";
 
         return string;
     }

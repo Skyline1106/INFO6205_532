@@ -20,6 +20,12 @@ class Test {
         assertEquals(testgene.getgene()[3], 1);
         assertEquals(testgene.getgene()[4], 0);
         assertEquals(testgene.getgene()[5], 1);
+        testgene.getlength();
+        testgene.getPhenotype();
+        testgene.getscore();
+        testgene.setlength(81);
+        testgene.setPhenotype(testarray);
+        testgene.setscore(2);
     }
 
     @org.junit.jupiter.api.Test
@@ -86,8 +92,8 @@ class Test {
 
         Sudoku.setInitialGene(testarray);
         Sudoku testmt1 =new Sudoku(curgene1);
-        testmt1.mutation(1,2);
-        Assertions.assertNotEquals(testarray[1],1);
+        testmt1.mutatePheno();
+        Assertions.assertNotEquals(testarray[1],0);
 
     }
 

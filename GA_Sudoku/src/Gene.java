@@ -1,5 +1,3 @@
-
-import java.util.Arrays;
 import java.util.Random;
 
 public class Gene {
@@ -48,9 +46,6 @@ public class Gene {
         for(int i=0; i<gene.length; i++) {
             phenotype[i] = gene[i];
         }
-        //System.arraycopy(gene, 0, phenotype, 0, gene.length);
-        //phenotype= Arrays.copyOf(gene,gene.length);
-        //phenotype = gene;
         this.score=0;
     }
 }
