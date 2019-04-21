@@ -8,9 +8,11 @@ public class Main {
         int popSize = 1000;
         int its = 0;
         int maxIts = 10000;
+        double mutaRate = 0.1;
+        double mateRate = 0.5;
 
 //        Sudoku.setInitialGene(new int[]{1, 0, 0, 4, 0, 0, 0, 0, 0, 3, 2, 0, 0, 0, 0, 0});
-        //Sudoku.setInitialGene(new int[]{5,2,4,0,6,0,1,9,3,
+        //0
         Sudoku.setInitialGene(new int[]{
                 5,2,4,0,6,0,1,9,3,
                 8,0,0,0,1,5,0,0,7,
@@ -34,10 +36,10 @@ public class Main {
                 double probM = Math.random();
                 double probC = Math.random();
 
-                if (probM>0.1)
+                if (probM>mutaRate)
                     pop.get(i).mutation();
 
-                if (probC<0.5)
+                if (probC<mateRate)
                     pop.get(i).crossover(pop.get(rand.nextInt(pop.size())));
             }
             //if (rand.nextBoolean())
