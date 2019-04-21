@@ -31,17 +31,18 @@ public class Main {
             for (int i = 0; i < popSize; i++) pop.add(new Sudoku(currentSu.getGene().clone()));
 
             for (int i = 0; i < pop.size(); i++) {
-                double prob = Math.random();
+                double probM = Math.random();
+                double probC = Math.random();
 
-                if (prob>0.1)
+                if (probM>0.1)
                     pop.get(i).mutation();
 
-                if (prob<0.5)
+                if (probC<0.5)
                     pop.get(i).crossover(pop.get(rand.nextInt(pop.size())));
             }
             //if (rand.nextBoolean())
-            double prob1 = Math.random();
-            if (prob1>0.5)
+            double probS = Math.random();
+            if (probS>0.5)
                 currentSu = Sudoku.bestSelection(pop);
             else
                 currentSu = Sudoku.rouletteSelection(pop);
