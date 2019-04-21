@@ -11,8 +11,9 @@ public class Main {
         double mutaRate = 0.1;
         double mateRate = 0.5;
 
-//        Sudoku.setInitialGene(new int[]{1, 0, 0, 4, 0, 0, 0, 0, 0, 3, 2, 0, 0, 0, 0, 0});
-        //0
+        //InitialPuzzle:
+        //0 Means empty grid need to be filled
+        //Given non-0 number can't be changed
         Sudoku.setInitialGene(new int[]{
                 5,2,4,0,6,0,1,9,3,
                 8,0,0,0,1,5,0,0,7,
