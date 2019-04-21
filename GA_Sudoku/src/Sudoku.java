@@ -244,7 +244,7 @@ public class Sudoku {
         }
         for (int j = 0; j < phenotype.length; j++)
             string += ((j % dimensions == 0) ? "\n" : "") + phenotype[j] + " ";
-        string += "\nFitness: " + fitnessValue + "\n";
+        string += "\nFitness: " + fitnessValue;
 
         return string;
     }

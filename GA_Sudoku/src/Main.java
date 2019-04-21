@@ -24,7 +24,7 @@ public class Main {
         Sudoku currentSu = new Sudoku(geneOps.initialize(Sudoku.getInitialGene().clone()));
 
         while (currentSu.getFitnessValue() != 0 && its < maxIts) {
-            System.out.println("Current " + currentSu + ", iteration: " + its);
+            System.out.println("Current " + currentSu + ", iteration: " + its + "\n");
 
             Vector<Sudoku> pop = new Vector<>();
 
