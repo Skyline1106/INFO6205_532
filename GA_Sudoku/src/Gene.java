@@ -41,7 +41,7 @@ public class Gene {
         phenotype = new int[length];
         Random rand = new Random();
         for(int i=0;i<length;i++){
-            gene[i] = rand.nextInt(2);
+            gene[i] = rand.nextInt(10);
         }
         for(int i=0; i<gene.length; i++) {
             phenotype[i] = gene[i];
