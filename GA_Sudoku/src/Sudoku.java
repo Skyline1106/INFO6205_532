@@ -126,7 +126,7 @@ public class Sudoku {
         }
         return fitness(this.phenotype);
     }
-
+    //# parameter 'fitness': The lower the better
     public static int fitness(int[] gene) {
         int ft = 0;
 
